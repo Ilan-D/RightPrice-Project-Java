@@ -10,7 +10,6 @@ public class RightPrice{
     public static String party2(int n, int round){
         String mess = "";
         int numRand = RandRange(0, n);
-        System.out.println(numRand);
         String resConsole = String.valueOf(numRand);
         String joueur = "";
         int cp = 0;
@@ -23,13 +22,13 @@ public class RightPrice{
             }else if(!joueur.equals(resConsole) && i<round-1){
                 if(cp < numRand){
                     System.out.println("essayez encore ! indice: le chiffre est trop petit");
-                }else if(cp > numRand){
+                }else if(cp > numRand && cp < n){
                     System.out.println("essayez encore ! indice: le chiffre est trop grand");
-                }else{
-                    System.out.println("vous êtes en dehors");
+                }else if(cp >= n){
+                    System.out.println("vous etes en dehors !");
                 }
             }else{
-                mess = "vous n'avez jamais obtenu le bon numéro, vous avez donc perdu la partie.";
+                mess = "vous n'avez jamais obtenu le bon numero, vous avez donc perdu la partie.";
             }
         }
         return mess;
@@ -41,6 +40,5 @@ public class RightPrice{
         String st = System.console().readLine();
         int round = Integer.valueOf(st);
         System.out.println(party2(100, round));
-        
     }
 }
