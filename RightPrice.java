@@ -29,7 +29,8 @@ public class RightPrice {
                     System.out.println("vous etes en dehors !");
                 }
             } else {
-                mess = "vous n'avez jamais obtenu le bon numero en " + cp + " manches, vous avez donc perdu la partie.";
+                mess = "vous n'avez jamais obtenu le bon numero en " + round
+                        + " manches, vous avez donc perdu la partie.";
             }
         }
         return mess;
