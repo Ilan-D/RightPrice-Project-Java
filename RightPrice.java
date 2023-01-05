@@ -21,11 +21,11 @@ public class RightPrice {
                 mess = "vous avez obtenue le bon numero !";
                 return mess;
             } else if (!joueur.equals(resConsole) && i < round - 1) {
-                if (cp < numRand) {
+                if (cp < numRand && cp >= 0) {
                     System.out.println("essayez encore ! indice: le chiffre est trop petit");
-                } else if (cp > numRand && cp < n) {
+                } else if (cp > numRand && cp <= n) {
                     System.out.println("essayez encore ! indice: le chiffre est trop grand");
-                } else if (cp >= n) {
+                } else if (cp >= n || cp < 0) {
                     System.out.println("vous etes en dehors !");
                 }
             } else {
